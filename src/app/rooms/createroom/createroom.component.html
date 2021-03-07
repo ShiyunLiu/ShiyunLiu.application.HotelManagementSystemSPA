@@ -1,0 +1,17 @@
+<div class = "text-secondary" style="margin-left: 2cm; width : 300px">
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+        <div class="form-group">
+            <label for="title">Roomtype Id</label>
+            <input
+              type="number"
+              class="form-control"
+              id="roomNo"
+              [(ngModel)]="room.rtCode"
+              name="roomNo"
+            />
+          </div>
+          <button (click)="createRoom()" class="btn btn-info">Create</button>
+        </div>
+  </div>
+  </div>

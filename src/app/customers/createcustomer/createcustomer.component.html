@@ -1,0 +1,104 @@
+<div class = "text-secondary" style="margin-left: 2cm; width : 300px">
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+            <label for="title">Room Number</label>
+            <input
+              type="number"
+              class="form-control"
+              id="roomno"
+              [(ngModel)]="customer.roomNo"
+              name="roomno"
+            />
+          </div>
+          <div class="form-group">
+            <label for="title">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              [(ngModel)]="customer.cName"
+              name="name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="title">Address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="address"
+              [(ngModel)]="customer.address"
+              name="address"
+            />
+          </div>
+          <div class="form-group">
+            <label for="title">Phone Number</label>
+            <input
+              type="text"
+              class="form-control"
+              id="phone"
+              [(ngModel)]="customer.phone"
+              name="phone"
+            />
+          </div>
+          <div class="form-group">
+            <label for="title">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="Email"
+              [(ngModel)]="customer.email"
+              name="Email"
+            />
+          </div>
+          <div class="form-group">
+              <label for="title">CheckIn</label>
+              <input
+                type="datetime"
+                class="form-control"
+                id="checkin"
+                [(ngModel)]="customer.checkIn"
+                name="checkin"
+              />
+            </div>
+          <div class="form-group">
+            <label for="title">Total Persons</label>
+            <input
+              type="number"
+              class="form-control"
+              id="totalPERSONS"
+              [(ngModel)]="customer.totalPersons"
+              name="totalPERSONS"
+            />
+          </div>
+  
+          <div class="form-group">
+            <label for="title">Booking Days</label>
+            <input
+              type="number"
+              class="form-control"
+              id="bookingDays"
+              [(ngModel)]="customer.bookingDays"
+              name="bookingDays"
+            />
+          </div>
+          <div class="form-group">
+              <label for="title">Advance</label>
+              <input
+                type="number"
+                class="form-control"
+                id="advance"
+                [(ngModel)]="customer.advance"
+                name="advance"
+              />
+            </div>
+  
+        <button (click)="createCustomer()" class="btn btn-info">Create</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h3>You successfully created a customer!</h3>
+        <button class="btn btn-info" (click)="newCustomer()">New..</button>
+      </div>
+    </div>
+  </div>

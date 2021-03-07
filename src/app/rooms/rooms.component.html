@@ -1,0 +1,11 @@
+<div style='margin-left: 2cm'>
+    <h4 class="text-secondary">All Rooms:</h4>
+    <ul class="rooms">
+        <li *ngFor="let room of rooms">
+            <a routerLink="/rooms/{{room.id}}" class="text-secondary p-0" >
+                <p>Room Number: <span>{{room.id}}</span>; Room Type: <span>{{room.rtId}}</span></p>
+            </a>
+        </li>
+    </ul>
+    <button class="btn btn-outline-info ml-2 mr-4" routerLink="/rooms/create" style="margin-bottom: 1cm;">Create Room</button>
+</div>
